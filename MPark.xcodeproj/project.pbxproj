@@ -14,6 +14,8 @@
 		7276A69127F986030090FE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7276A69027F986030090FE9E /* Assets.xcassets */; };
 		7276A69427F986030090FE9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7276A69227F986030090FE9E /* LaunchScreen.storyboard */; };
 		7276A69C27F986190090FE9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7276A69B27F986190090FE9E /* GoogleService-Info.plist */; };
+		7276A69E27FA09E80090FE9E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276A69D27FA09E80090FE9E /* MapViewController.swift */; };
+		7276A6A027FA0A120090FE9E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276A69F27FA0A120090FE9E /* AccountViewController.swift */; };
 		9E423C7A5FB13F0FA766FA37 /* Pods_MPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAD4AB4DC634A97C4CD5F85 /* Pods_MPark.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		7276A69327F986030090FE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7276A69527F986030090FE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7276A69B27F986190090FE9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7276A69D27FA09E80090FE9E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7276A69F27FA0A120090FE9E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9FAD4AB4DC634A97C4CD5F85 /* Pods_MPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,6 +72,8 @@
 				7276A68727F986010090FE9E /* AppDelegate.swift */,
 				7276A68927F986010090FE9E /* SceneDelegate.swift */,
 				7276A68B27F986010090FE9E /* ViewController.swift */,
+				7276A69D27FA09E80090FE9E /* MapViewController.swift */,
+				7276A69F27FA0A120090FE9E /* AccountViewController.swift */,
 				7276A68D27F986010090FE9E /* Main.storyboard */,
 				7276A69027F986030090FE9E /* Assets.xcassets */,
 				7276A69227F986030090FE9E /* LaunchScreen.storyboard */,
@@ -91,7 +97,6 @@
 				2C229382BB157E86CD09B64B /* Pods-MPark.debug.xcconfig */,
 				62665B2B35A5B98D9F380F79 /* Pods-MPark.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,8 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7276A68C27F986010090FE9E /* ViewController.swift in Sources */,
+				7276A6A027FA0A120090FE9E /* AccountViewController.swift in Sources */,
 				7276A68827F986010090FE9E /* AppDelegate.swift in Sources */,
 				7276A68A27F986010090FE9E /* SceneDelegate.swift in Sources */,
+				7276A69E27FA09E80090FE9E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
