@@ -16,11 +16,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func signInClicked(_ sender: Any) {
         
-        performSegue(withIdentifier: "toMapVC", sender: nil)
+        if emailText.text != "" && passwordText.text != "" {
+            
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { authdata, error in
+                
+                if error != nil {
+                    
+                    self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Error!")
+                    
+                }else {
+                    
+                    self.performSegue(withIdentifier: "toMapVC", sender: nil)
+                    
+                }
+                
+            }
+            
+        }else {
+            
+            makeAlert(titleInput: "Error!", messageInput: "Missing Username or Password")
+            
+        }
         
     }
     
