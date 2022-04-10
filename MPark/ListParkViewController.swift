@@ -41,10 +41,11 @@ class ListParkViewController: UIViewController, UITableViewDelegate, UITableView
             }else {
                 
                 if snapshot?.isEmpty != true && snapshot != nil {
-                
+                    
+                    self.parkLotArray.removeAll(keepingCapacity: false)
+                    self.statusArray.removeAll(keepingCapacity: false)
+                    
                     for document in snapshot!.documents {
-                        
-                        let documentID = document.documentID
                         
                         if let parkLot = document.get("parklot") as? String {
                             
@@ -60,9 +61,9 @@ class ListParkViewController: UIViewController, UITableViewDelegate, UITableView
                         
                     }
                     
+                    self.tableView.reloadData()
+                    
                 }
-                
-                self.tableView.reloadData()
                 
             }
             
@@ -72,7 +73,7 @@ class ListParkViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statusArray.count
+        return parkLotArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
