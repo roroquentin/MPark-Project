@@ -200,6 +200,22 @@
             </objects>
             <point key="canvasLocation" x="654" y="337"/>
         </scene>
+        <!--List Park View Controller-->
+        <scene sceneID="UTU-62-uOh">
+            <objects>
+                <viewController id="aCN-DS-TH5" customClass="ListParkViewController" customModule="MPark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2gG-ZP-qqq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Gm9-CN-dmU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cea-ID-ZwK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8F-VD-0Pa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="9"/>
+        </scene>
         <!--Map-->
         <scene sceneID="pzC-Db-WqG">
             <objects>
@@ -224,6 +240,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="location.magnifyingglass" catalog="system" id="6uK-jD-1ZS"/>
                     <connections>
                         <outlet property="mapView" destination="xH1-6E-p4n" id="xbd-8F-HI7"/>
+                        <segue destination="aCN-DS-TH5" kind="show" identifier="toParkList" id="OVh-MO-n4L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg6-Z8-JMP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
