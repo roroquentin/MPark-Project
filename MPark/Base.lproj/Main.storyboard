@@ -207,10 +207,24 @@
                     <view key="view" contentMode="scaleToFill" id="rLt-mh-YV9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xH1-6E-p4n">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qyb-zv-l1p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xH1-6E-p4n" firstAttribute="leading" secondItem="qyb-zv-l1p" secondAttribute="leading" id="6LI-NA-Vr2"/>
+                            <constraint firstItem="xH1-6E-p4n" firstAttribute="top" secondItem="qyb-zv-l1p" secondAttribute="top" id="CLw-EF-pWp"/>
+                            <constraint firstItem="qyb-zv-l1p" firstAttribute="bottom" secondItem="xH1-6E-p4n" secondAttribute="bottom" id="GBs-6l-vpP"/>
+                            <constraint firstItem="qyb-zv-l1p" firstAttribute="trailing" secondItem="xH1-6E-p4n" secondAttribute="trailing" id="PRX-aQ-UXT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="location.magnifyingglass" catalog="system" id="6uK-jD-1ZS"/>
+                    <connections>
+                        <outlet property="mapView" destination="xH1-6E-p4n" id="xbd-8F-HI7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg6-Z8-JMP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
