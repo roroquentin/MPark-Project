@@ -17,6 +17,7 @@
 		7276A69E27FA09E80090FE9E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276A69D27FA09E80090FE9E /* MapViewController.swift */; };
 		7276A6A027FA0A120090FE9E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276A69F27FA0A120090FE9E /* AccountViewController.swift */; };
 		72851A312802BF4F00928FBC /* ListParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72851A302802BF4F00928FBC /* ListParkViewController.swift */; };
+		72851A332802C5C600928FBC /* ParkListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72851A322802C5C600928FBC /* ParkListCell.swift */; };
 		9E423C7A5FB13F0FA766FA37 /* Pods_MPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAD4AB4DC634A97C4CD5F85 /* Pods_MPark.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		7276A69D27FA09E80090FE9E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7276A69F27FA0A120090FE9E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		72851A302802BF4F00928FBC /* ListParkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParkViewController.swift; sourceTree = "<group>"; };
+		72851A322802C5C600928FBC /* ParkListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkListCell.swift; sourceTree = "<group>"; };
 		9FAD4AB4DC634A97C4CD5F85 /* Pods_MPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				7276A68B27F986010090FE9E /* ViewController.swift */,
 				7276A69D27FA09E80090FE9E /* MapViewController.swift */,
 				72851A302802BF4F00928FBC /* ListParkViewController.swift */,
+				72851A322802C5C600928FBC /* ParkListCell.swift */,
 				7276A69F27FA0A120090FE9E /* AccountViewController.swift */,
 				7276A68D27F986010090FE9E /* Main.storyboard */,
 				7276A69027F986030090FE9E /* Assets.xcassets */,
@@ -223,6 +226,7 @@
 				7276A6A027FA0A120090FE9E /* AccountViewController.swift in Sources */,
 				7276A68827F986010090FE9E /* AppDelegate.swift in Sources */,
 				7276A68A27F986010090FE9E /* SceneDelegate.swift in Sources */,
+				72851A332802C5C600928FBC /* ParkListCell.swift in Sources */,
 				72851A312802BF4F00928FBC /* ListParkViewController.swift in Sources */,
 				7276A69E27FA09E80090FE9E /* MapViewController.swift in Sources */,
 			);
