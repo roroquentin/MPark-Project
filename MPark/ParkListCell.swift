@@ -12,6 +12,9 @@ class ParkListCell: UITableViewCell {
     @IBOutlet weak var parkPlatzLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

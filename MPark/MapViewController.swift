@@ -44,7 +44,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
        let pinPark = MKPointAnnotation()
        let pinLoc = CLLocationCoordinate2D(latitude: 41.14133, longitude: 29.102933)
        pinPark.coordinate = pinLoc
-       pinPark.title = "Park alanı"
+       pinPark.title = "TAÜ Parkplatz"
+       pinPark.subtitle = "Testbereich"
        mapView.addAnnotation(pinPark)
        
    }
@@ -72,8 +73,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
-        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
+        
+        mapView.showsUserLocation = true
     
         mapView.setRegion(region, animated: true)
     }

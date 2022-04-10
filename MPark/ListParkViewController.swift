@@ -12,9 +12,10 @@ class ListParkViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     
-    var parkLotArray = [String]()
+    var parkPlatzArray = [String]()
     var statusArray = [String]()
-    
+    var latitudeArray = [String]()
+    var longitudeArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,20 +43,34 @@ class ListParkViewController: UIViewController, UITableViewDelegate, UITableView
                 
                 if snapshot?.isEmpty != true && snapshot != nil {
                     
-                    self.parkLotArray.removeAll(keepingCapacity: false)
+                    self.parkPlatzArray.removeAll(keepingCapacity: false)
                     self.statusArray.removeAll(keepingCapacity: false)
+                    self.latitudeArray.removeAll(keepingCapacity: false)
+                    self.longitudeArray.removeAll(keepingCapacity: false)
                     
                     for document in snapshot!.documents {
                         
-                        if let parkLot = document.get("parklot") as? String {
+                        if let parkplatz = document.get("parkplatz") as? String {
                             
-                            self.parkLotArray.append(parkLot)
+                            self.parkPlatzArray.append(parkplatz)
                             
                         }
                         
                         if let status = document.get("status") as? String {
                             
                             self.statusArray.append(status)
+                            
+                        }
+                        
+                        if let latitude = document.get("latitude") as? String {
+                            
+                            self.latitudeArray.append(latitude)
+                            
+                        }
+                        
+                        if let longitude = document.get("longitude") as? String {
+                            
+                            self.longitudeArray.append(longitude)
                             
                         }
                         
@@ -73,15 +88,17 @@ class ListParkViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parkLotArray.count
+        return parkPlatzArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ParkListCell
         
-        cell.parkPlatzLabel.text = String(parkLotArray[indexPath.row])
+        cell.parkPlatzLabel.text = String(parkPlatzArray[indexPath.row])
         cell.statusLabel.text = String(statusArray[indexPath.row])
+        cell.latitudeLabel.text = String(latitudeArray[indexPath.row])
+        cell.longitudeLabel.text = String(longitudeArray[indexPath.row])
         
         return cell
         
