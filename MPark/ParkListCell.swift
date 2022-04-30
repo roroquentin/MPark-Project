@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class ParkListCell: UITableViewCell {
+class ParkListCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var parkPlatzLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
+    
+    var annotationTitle = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +32,25 @@ class ParkListCell: UITableViewCell {
 
     @IBAction func navigationBtn(_ sender: Any) {
         
+        let requestLocation = CLLocation(latitude: 41.14133, longitude: 29.102933)
         
+        CLGeocoder().reverseGeocodeLocation(requestLocation) { placemarks, error in
+            
+            if let placemark = placemarks {
+             
+                if placemark.count > 0 {
+                    
+                    let newPlacemark = MKPlacemark(placemark: placemark[0])
+                    let item = MKMapItem(placemark: newPlacemark)
+                    item.name = self.annotationTitle
+                    let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                    item.openInMaps(launchOptions: launchOptions)
+                    
+                }
+                
+            }
+            
+        }
         
     }
     

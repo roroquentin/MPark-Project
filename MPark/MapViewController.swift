@@ -44,7 +44,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
        let pinPark = MKPointAnnotation()
        let pinLoc = CLLocationCoordinate2D(latitude: 41.14133, longitude: 29.102933)
        pinPark.coordinate = pinLoc
-       pinPark.title = "TAÜ Parkplatz"
+       pinPark.title = "TDU Parkplatz"
        pinPark.subtitle = "Testbereich"
        mapView.addAnnotation(pinPark)
        
@@ -87,12 +87,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             return nil
         }
         
-        let reuseID = "MyPin"
+        let reuseID = "Park"
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID) as? MKPinAnnotationView
 
         if pinView == nil {
             
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            pinView?.tintColor = UIColor.green
+            //pinView?.image = UIImage(named: reuseID)
+            //let transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
+            //pinView?.transform = transform
             pinView?.canShowCallout = true
 
             let btnInfo = UIButton(type: UIButton.ButtonType.detailDisclosure)
