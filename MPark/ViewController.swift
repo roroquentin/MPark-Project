@@ -17,6 +17,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // klavyenin kapanması için
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeybord))
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func hideKeybord(){
+        view.endEditing(true)
     }
 
     @IBAction func signInClicked(_ sender: Any) {
