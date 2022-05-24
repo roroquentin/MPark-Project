@@ -42,7 +42,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     private func  addCostumPin() {
        
        let pinPark = MKPointAnnotation()
-       let pinLoc = CLLocationCoordinate2D(latitude: 41.14133, longitude: 29.102933)
+        let pinLoc = CLLocationCoordinate2D(latitude: 41.14077, longitude: 29.10313)
        pinPark.coordinate = pinLoc
        pinPark.title = "TDU Parkplatz"
        pinPark.subtitle = "Testbereich"

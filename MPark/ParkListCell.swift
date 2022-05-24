@@ -32,7 +32,7 @@ class ParkListCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegat
 
     @IBAction func navigationBtn(_ sender: Any) {
         
-        let requestLocation = CLLocation(latitude: 41.14133, longitude: 29.102933)
+        let requestLocation = CLLocation(latitude: 41.14077, longitude: 29.10313)
         
         CLGeocoder().reverseGeocodeLocation(requestLocation) { placemarks, error in
             
