@@ -183,12 +183,34 @@
                                     <action selector="logoutClicked:" destination="kk0-kH-3l7" eventType="touchUpInside" id="Q5B-jb-wZD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Es wird in der nächte Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGY-s8-Sfd">
+                                <rect key="frame" x="97" y="124" width="220" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="BKG-8Y-YPd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="für Benutzerkonooperationen verwendet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-Nq-ayH">
+                                <rect key="frame" x="51" y="170" width="312" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xMa-IK-rH5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ue-0Y-MEv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="maA-7B-LZf" firstAttribute="top" secondItem="6ue-0Y-MEv" secondAttribute="top" constant="604" id="nKN-g1-aNB"/>
-                            <constraint firstItem="maA-7B-LZf" firstAttribute="centerX" secondItem="uEM-tB-xej" secondAttribute="centerX" id="yve-OO-U0V"/>
+                            <constraint firstItem="bG0-Nq-ayH" firstAttribute="top" secondItem="IGY-s8-Sfd" secondAttribute="bottom" constant="1" id="8Id-nZ-KFt"/>
+                            <constraint firstItem="6ue-0Y-MEv" firstAttribute="bottom" secondItem="maA-7B-LZf" secondAttribute="bottom" constant="52" id="CDM-sd-s6m"/>
+                            <constraint firstItem="IGY-s8-Sfd" firstAttribute="top" secondItem="6ue-0Y-MEv" secondAttribute="top" constant="124" id="Ces-DM-mHU"/>
+                            <constraint firstItem="IGY-s8-Sfd" firstAttribute="centerX" secondItem="bG0-Nq-ayH" secondAttribute="centerX" id="LNH-Ke-wxQ"/>
+                            <constraint firstItem="IGY-s8-Sfd" firstAttribute="centerX" secondItem="uEM-tB-xej" secondAttribute="centerX" id="WMS-kO-Hx9"/>
+                            <constraint firstItem="bG0-Nq-ayH" firstAttribute="centerX" secondItem="maA-7B-LZf" secondAttribute="centerX" id="nyD-tE-I2R"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="Mwp-lh-8If"/>
@@ -198,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuT-gg-hGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="337"/>
+            <point key="canvasLocation" x="653.62318840579712" y="336.68478260869568"/>
         </scene>
         <!--List Park View Controller-->
         <scene sceneID="UTU-62-uOh">
